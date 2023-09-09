@@ -1,4 +1,4 @@
-module iiitb_r2_4bit_bm(
+module pes_r2_4bm(
 	// control signals
 	input clk,
 	input load,
