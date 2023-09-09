@@ -1,6 +1,6 @@
 `timescale 1ns/ 1ps
 
-module iiitb_r2_4bit_bm_tb;
+module pes_r2_4bm_tb;
 
 	// Inputs
 	reg clk;
@@ -13,7 +13,7 @@ module iiitb_r2_4bit_bm_tb;
 	wire [7:0] P;
 
 	// Instantiate the Design Under Test (DUT)
-	 iiitb_r2_4bit_bm dut (
+	 pes_r2_4bm dut (
 		.clk(clk), 
 		.load(load), 
 		.reset(reset), 
@@ -28,7 +28,7 @@ module iiitb_r2_4bit_bm_tb;
   initial 
     begin
       	$dumpfile("design.vcd");
-        $dumpvars(0,iiitb_r2_4bit_bm_tb );
+	    $dumpvars(0,pes_r2_4bm_tb );
       	$monitor ( $time, " Q = %b, M = %b, P = %b,Q_t = %b, Q-1 = %b, A = %b", Q, M, P, dut.Q_temp, dut.Q_minus_one, dut.A);
     end
 	
