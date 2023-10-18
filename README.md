@@ -2,13 +2,13 @@
 This project adheres to the ASIC design flow, a systematic approach for creating custom integrated circuits tailored to specific applications. In this project, Yosys, an open-source synthesis tool, is used for logic synthesis. Yosys helps convert a high-level hardware description of the multiplier into a netlist, optimizing it for area, power, and timing performance. After synthesis, the project employs tools like GLS (Gate-Level Simulation) and OpenLane for physical design. The primary objective is to create a highly efficient custom integrated circuit tailored specifically for binary multiplication, demonstrating the precision and optimization achievable through a systematic ASIC design approach.
 
 ## TABLE OF CONTENTS
-* [**INTRODUCTION**](introduction)
-* [**RTL DESIGN AND SYNTHESIS**](rtl-design-and-synthesis)
-  + [INSTALLATION PROCESS OR PRE-REQUISITES](installation-process-or-pre-requisites)
-  + [RTL SIMULATION](rtl-simulation)
-  + [RTL NETLIST](rtl-netlist)
-  + [GATE-LEVEL NETLIST](gate-level-netlist)
-* [**PHYSICAL DESIGN**](physical-design)
+* [**INTRODUCTION**](#introduction)
+* [**RTL DESIGN AND SYNTHESIS**](#rtl-design-and-synthesis)
+  + [INSTALLATION PROCESS OR PRE-REQUISITES](#installation-process-or-pre-requisites)
+  + [RTL SIMULATION](#rtl-simulation)
+  + [RTL NETLIST](#rtl-netlist)
+  + [GATE-LEVEL NETLIST](#gate-level-netlist)
+* [**PHYSICAL DESIGN**](#physical-design)
 
 ## INTRODUCTION
 Booth's Algorithm is a binary multiplication technique used in computer arithmetic. It is particularly useful for efficiently multiplying two binary numbers, especially when one of the numbers is negative. 
