@@ -48,7 +48,13 @@ This project aims to efficiently design and fabricate a custom integrated circui
    * Next step: `./a.out`
    * This will dump the .vcd file which will give us the output waveform.
    * To get the output waveform on gtkwave: `gtkwave pes_R2_4BM_tb.vcd`
+     
+     ![Screenshot from 2023-10-18 21-44-59](https://github.com/NishitaNJ/pes_R2_4BM/assets/142140741/3fcc0e63-03a5-4d57-94cd-b712f47dd05e)
+
    * Simulation Waveform:
+     
+     ![Screenshot from 2023-10-18 17-58-54](https://github.com/NishitaNJ/pes_R2_4BM/assets/142140741/d048ca5c-a94d-4191-b14f-d968cc74f4fb)
+
      From the above image,
      + The Multiplier, Q = 1011 which is in binary form and in signed decimal form it is -5.
      + Similarly Multiplicand, M = 1010, signed decimal = -6.
@@ -56,16 +62,25 @@ This project aims to efficiently design and fabricate a custom integrated circui
 ### RTL NETLIST
    * To get the netlist:
      + Invoke Yosys: `yosys`
-     + `read_liberty -lib /home/nishita
+     + `read_liberty -lib /home/nishita_joshi/Desktop/verilogfiles/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc_hd__tt_025C_1v80.lib`
      + `read_verilog pes_R2_4BM.v`
      + `synth -top pes_R2_4BM`
-     + `abc`
+     + `abc -liberty /home/nishita_joshi/Desktop/verilogfiles/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc_hd__tt_025C_1v80.lib`
+
+      **Skywater130pdk Physical Cell Mapping**
+     
+     ![Screenshot from 2023-10-18 21-49-34](https://github.com/NishitaNJ/pes_R2_4BM/assets/142140741/83612ff9-88f8-4d40-a673-33007d4af13c)
+
      + `show`
+     
+     ![Screenshot from 2023-10-18 21-50-17](https://github.com/NishitaNJ/pes_R2_4BM/assets/142140741/b4b4e350-bb3c-4dca-9b12-1a844b47b97c)
+
 ### GATE-LEVEL NETLIST
    * Gate-level netlist will be in the form of `.v` file. To get the Gate-level netlist type the following commands:
      + To write netlist file: `write_verilog pes_R2_4BM_netlist.v`
      + To open the netlist file: `!gvim pes_R2_4BM_netlist.v`
    
+      ![Screenshot from 2023-10-18 21-53-43](https://github.com/NishitaNJ/pes_R2_4BM/assets/142140741/2ecb03ac-03df-4c1f-8152-e33524a3d9da)
 
 
 
