@@ -4,10 +4,10 @@ This project adheres to the ASIC design flow, a systematic approach for creating
 ## TABLE OF CONTENTS
 * [**INTRODUCTION**](#introduction)
 * [**RTL DESIGN AND SYNTHESIS**](#rtl-design-and-synthesis)
-  + [INSTALLATION PROCESS OR PRE-REQUISITES](#installation-process-or-pre-requisites)
-  + [RTL SIMULATION](#rtl-simulation)
-  + [RTL NETLIST](#rtl-netlist)
-  + [GATE-LEVEL NETLIST](#gate-level-netlist)
+  + [Installation Process or Pre-requisites](#installation-process-or-pre-requisites)
+  + [RTL Simulation](#rtl-simulation)
+  + [RTL Synthesis](#rtl-synthesis)
+  + [Gate-level Simulation](#gate-level-simulation)
 * [**PHYSICAL DESIGN**](#physical-design)
 
 ## INTRODUCTION
@@ -59,29 +59,41 @@ This project aims to efficiently design and fabricate a custom integrated circui
      + The Multiplier, Q = 1011 which is in binary form and in signed decimal form it is -5.
      + Similarly Multiplicand, M = 1010, signed decimal = -6.
      + Product, P = 00011110, signed decimal = 30.
-### RTL NETLIST
-   * To get the netlist:
-     + Invoke Yosys: `yosys`
-     + `read_liberty -lib /home/nishita_joshi/Desktop/verilogfiles/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc_hd__tt_025C_1v80.lib`
-     + `read_verilog pes_R2_4BM.v`
-     + `synth -top pes_R2_4BM`
-     + `abc -liberty /home/nishita_joshi/Desktop/verilogfiles/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc_hd__tt_025C_1v80.lib`
+### RTL SYNTHESIS
+  + Invoke Yosys: `yosys`
+  + Read the library file: `read_liberty -lib /home/nishita_joshi/Desktop/verilogfiles/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc_hd__tt_025C_1v80.lib`
+  + Read verilog files: `read_verilog pes_R2_4BM.v`
+  + To synthesize the file: `synth -top pes_R2_4BM`
+  + Map the library file: `dfflibmap -liberty /home/nishita_joshi/Desktop/verilogfiles/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc_hd__tt_025C_1v80.lib`
+    
+    ![Screenshot from 2023-10-19 19-36-28](https://github.com/NishitaNJ/pes_R2_4BM/assets/142140741/3f634047-3720-4ee5-8243-5f101c304744)
+    
+    ![Screenshot from 2023-10-19 19-38-08](https://github.com/NishitaNJ/pes_R2_4BM/assets/142140741/b7d7fe0c-631c-44c6-9930-78716281a75a)
 
-      **Skywater130pdk Physical Cell Mapping**
+  + To generate netlist: `abc -liberty /home/nishita_joshi/Desktop/verilogfiles/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc_hd__tt_025C_1v80.lib`
+  
+    **Skywater130pdk Physical Cell Mapping**
      
-     ![Screenshot from 2023-10-18 21-49-34](https://github.com/NishitaNJ/pes_R2_4BM/assets/142140741/83612ff9-88f8-4d40-a673-33007d4af13c)
+     ![Screenshot from 2023-10-19 19-38-43](https://github.com/NishitaNJ/pes_R2_4BM/assets/142140741/c64f9799-34a9-4acf-8c28-0926c071479b)
 
-     + `show`
+  + `flatten`
+  + `show`
      
-     ![Screenshot from 2023-10-18 21-50-17](https://github.com/NishitaNJ/pes_R2_4BM/assets/142140741/b4b4e350-bb3c-4dca-9b12-1a844b47b97c)
+    ![Screenshot from 2023-10-19 19-42-15](https://github.com/NishitaNJ/pes_R2_4BM/assets/142140741/13b78118-3cc9-44d0-b72e-3b2c74813a0f)
 
-### GATE-LEVEL NETLIST
-   * Gate-level netlist will be in the form of `.v` file. To get the Gate-level netlist type the following commands:
-     + To write netlist file: `write_verilog pes_R2_4BM_netlist.v`
-     + To open the netlist file: `!gvim pes_R2_4BM_netlist.v`
-   
-      ![Screenshot from 2023-10-18 21-53-43](https://github.com/NishitaNJ/pes_R2_4BM/assets/142140741/2ecb03ac-03df-4c1f-8152-e33524a3d9da)
+ + Gate-level netlist will be in the form of `.v` file. To get the Gate-level netlist type the following commands:
+     - To write netlist file: `write_verilog pes_R2_4BM_netlist.v`
+     - To open the netlist file: `!gvim pes_R2_4BM_netlist.v`
 
+### GATE-LEVEL SIMULATION
+* To invoke GLS:
+  + `iverilog /home/nishita_joshi/Desktop/verilogfiles/sky130RTLDesignAndSynthesisWorkshop/my_lib/verilog_model/primitives.v /home/nishita_joshi/Desktop/verilogfiles/sky130RTLDesignAndSynthesisWorkshop/my_lib/verilog_model/sky130_fd_sc_hd.v pes_R2_4BM.v pes_R2_4BM_tb.v`
+  + `./a.out`
+  + `gtkwave pes_R2_4BM_tb.vcd`
+  
+  ![Screenshot from 2023-10-19 19-39-25](https://github.com/NishitaNJ/pes_R2_4BM/assets/142140741/5926faef-f810-4661-ba3d-91c6bb74bbe4)
 
+  **Gate Level Simulation Waveform**
 
+  ![Screenshot from 2023-10-19 19-14-02](https://github.com/NishitaNJ/pes_R2_4BM/assets/142140741/1b8f8b03-dd89-4196-be31-3f50159c680c)
 
