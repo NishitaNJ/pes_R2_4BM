@@ -187,6 +187,7 @@ Run the following commands on the terminal to install Yosys:
 </details>
 
 ### Design preparation:
+* Prepares the design source files and constraints.
 * For physical design create a directory of the design and copy the following files to the src folder of the directory:
   `config.json, pes_R2_4BM.v , sky130_vsdinv.lef , sky130_fd_sc_hd_fast.lib , sky130_fd_sc_hd_slow.lib and sky130_fd_sc_hd_typical.lib in OpenLane/designs/pes_R2_4BM/src`
 * Invoke Openlane:
@@ -207,6 +208,7 @@ Run the following commands on the terminal to install Yosys:
   ![Screenshot from 2023-11-04 15-08-21](https://github.com/NishitaNJ/pes_R2_4BM/assets/142140741/2a5e3d01-d958-424e-9f9e-4802d4522f5f)
 
 ### Synthesis:
+* Generates a logical representation of the design.
 * For synthesis run: `run_synthesis`
   
   ![Screenshot from 2023-11-04 15-11-49](https://github.com/NishitaNJ/pes_R2_4BM/assets/142140741/f63156f4-a514-444e-87cf-1d86726cdab4)
@@ -223,7 +225,8 @@ Run the following commands on the terminal to install Yosys:
   ![Screenshot from 2023-11-04 15-14-46](https://github.com/NishitaNJ/pes_R2_4BM/assets/142140741/ecd184a9-0e10-4fa4-8524-b6b46282eda9)
 
 ### Floorplan:
-* For floorplan: `run_floorplan`
+* Defines the chip's physical layout by specifying the core, periphery, and macroblock areas. Allocate space for standard cells, I/O pads, and other components.
+* For floorplan run: `run_floorplan`
   
   ![Screenshot from 2023-11-04 15-21-45](https://github.com/NishitaNJ/pes_R2_4BM/assets/142140741/db673eda-a9af-4425-8056-8fc7a88b9848)
 
@@ -244,11 +247,13 @@ Run the following commands on the terminal to install Yosys:
 ![Screenshot from 2023-11-04 16-00-23](https://github.com/NishitaNJ/pes_R2_4BM/assets/142140741/733b0a89-dc5e-4cf2-834b-7c9475c5b9e1)
 
 ### Placement:
-* For placement: `run_placement`
+* Arrange the standard cells within the core area according to the floorplan. Optimize for area, wirelength, and congestion. Generate an initial placement that adheres to design constraints.
+* For placement run: `run_placement`
   
   ![Screenshot from 2023-11-04 15-32-35](https://github.com/NishitaNJ/pes_R2_4BM/assets/142140741/0fd7d2b2-3f72-4988-be94-e89e10d0b414)
 
 * To view the placement:
+  
   `$ magic -T /home/nishitajoshi/Desktop/verilog_files/OpenLane/vsdstdcelldesign/libs/sky130A.tech /home/nishitajoshi/Desktop/verilog_files/OpenLane/designs/pes_R2_4BM/runs/RUN_2023.11.04_07.24.39/tmp/merged.nom.lef def read pes_R2_4BM.def &`
 
 ![Screenshot from 2023-11-04 15-35-37](https://github.com/NishitaNJ/pes_R2_4BM/assets/142140741/980828da-f2a5-4ffd-85cf-c8ecf3f6072f)
@@ -262,7 +267,8 @@ Run the following commands on the terminal to install Yosys:
   ![Screenshot from 2023-11-04 15-39-19](https://github.com/NishitaNJ/pes_R2_4BM/assets/142140741/48902121-ad7d-4ae7-846f-0029a230e72a)
 
 ### Clock Tree Synthesis(CTS):
-* For CTS: `run_cts`
+* Creates a clock distribution network to ensure synchronized clock signals. Inserts buffers and inverters to balance clock paths. Minimizes clock skew and maintain setup and hold times.
+* For CTS run: `run_cts`
   
   ![Screenshot from 2023-11-04 15-46-18](https://github.com/NishitaNJ/pes_R2_4BM/assets/142140741/fc8684f9-1347-4b2f-876a-863a20536f40)
 
@@ -283,11 +289,13 @@ Run the following commands on the terminal to install Yosys:
 
 
 ### Routing:
-* For routing: `run_routing`
+* Establishes interconnections between standard cells.
+* For routing run: `run_routing`
   
   ![Screenshot from 2023-11-04 15-49-08](https://github.com/NishitaNJ/pes_R2_4BM/assets/142140741/0c6b1b89-1e5a-47f9-91b4-97d047d09a3e)
 
 * To view the routing layout:
+  
   `$ magic -T /home/nishitajoshi/Desktop/verilog_files/OpenLane/vsdstdcelldesign/libs/sky130A.tech /home/nishitajoshi/Desktop/verilog_files/OpenLane/designs/pes_R2_4BM/runs/RUN_2023.11.04_07.24.39/tmp/merged.nom.lef def read pes_R2_4BM.def &`
 
   ![Screenshot from 2023-11-04 15-49-47](https://github.com/NishitaNJ/pes_R2_4BM/assets/142140741/408a7c4f-0462-49f0-99dc-dd8d03e3a6ba)
