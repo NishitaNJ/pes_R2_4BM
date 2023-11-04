@@ -272,7 +272,7 @@ Run the following commands on the terminal to install Yosys:
   
   ![Screenshot from 2023-11-04 15-46-18](https://github.com/NishitaNJ/pes_R2_4BM/assets/142140741/fc8684f9-1347-4b2f-876a-863a20536f40)
 
-* Reports Generated:
+* **Reports Generated:**
   
   ![Screenshot from 2023-11-04 17-24-47](https://github.com/NishitaNJ/pes_R2_4BM/assets/142140741/7e665b5d-add5-4666-a198-13fab18dd7d0)
 
@@ -327,7 +327,29 @@ Run the following commands on the terminal to install Yosys:
 
   ![Screenshot from 2023-11-04 16-25-41](https://github.com/NishitaNJ/pes_R2_4BM/assets/142140741/018df610-de43-4bd9-acca-241c10837801)
 
-  Area = 5806.5 $um^2$
+  + **Congestion Report:**
+    
+    ![Screenshot from 2023-11-04 18-25-16](https://github.com/NishitaNJ/pes_R2_4BM/assets/142140741/9aff6c34-6f15-4d7c-bc02-4c90c7c6a84b)
+
+  + **Power & Skew Report:**
+
+    ![Screenshot from 2023-11-04 18-19-24](https://github.com/NishitaNJ/pes_R2_4BM/assets/142140741/947fc814-7665-4c36-882f-6c75b8691433)
+
+  + **Summary Report:**
+
+    ![Screenshot from 2023-11-04 18-19-40](https://github.com/NishitaNJ/pes_R2_4BM/assets/142140741/3dff8ada-609d-4985-b7f2-42c6c01dee21)
+
+  + **Area Report:**
+
+   ![Screenshot from 2023-11-04 18-19-59](https://github.com/NishitaNJ/pes_R2_4BM/assets/142140741/392cd57a-3f4f-4657-8072-346f420ea939)
+  
+  + **Statistics:**
+    - Area = 5806.5 $um^2$
+    - Internal Power = 1.94e-04 W
+    - Switching Power = 6.32e-05 W
+    - Leakage Power = 7.92e-10 W
+    - Total Power = 2.58e-04 W
+  
 
 
 
