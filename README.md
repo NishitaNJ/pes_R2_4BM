@@ -13,7 +13,7 @@ This project adheres to the ASIC design flow, a systematic approach for creating
   + [Synthesis](#synthesis)
   + [Floorplan](#floorplan)
   + [Placement](#placement)
-  + [Clock Tree Synthesis(CTS)](#clock-tree-synthesis-(cts))
+  + [Clock Tree Synthesis(CTS)](#clock-tree-synthesis)
   + [Routing](#routing)
 
 ## INTRODUCTION
