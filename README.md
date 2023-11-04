@@ -273,6 +273,23 @@ Run the following commands on the terminal to install Yosys:
   ![Screenshot from 2023-11-04 15-46-18](https://github.com/NishitaNJ/pes_R2_4BM/assets/142140741/fc8684f9-1347-4b2f-876a-863a20536f40)
 
 * Reports Generated:
+  
+  ![Screenshot from 2023-11-04 17-24-47](https://github.com/NishitaNJ/pes_R2_4BM/assets/142140741/7e665b5d-add5-4666-a198-13fab18dd7d0)
+
+  ![Screenshot from 2023-11-04 17-25-17](https://github.com/NishitaNJ/pes_R2_4BM/assets/142140741/13969d0c-3a4e-4b9a-80a9-e9e707aaece7)
+
+  ![Screenshot from 2023-11-04 17-25-55](https://github.com/NishitaNJ/pes_R2_4BM/assets/142140741/afd5895a-ab4e-4fd2-aebe-9770e74da38f)
+
+  ![Screenshot from 2023-11-04 17-26-50](https://github.com/NishitaNJ/pes_R2_4BM/assets/142140741/33ac3a99-09c2-438c-8300-8c88b0b8d087)
+
+  ![Screenshot from 2023-11-04 17-27-27](https://github.com/NishitaNJ/pes_R2_4BM/assets/142140741/0fe8a4fe-8b29-4c1c-9a9a-155cbafc2ce6)
+
+  ![Screenshot from 2023-11-04 17-28-00](https://github.com/NishitaNJ/pes_R2_4BM/assets/142140741/db2f28e3-bb8d-4acb-b95a-db0e6b9dfca5)
+
+  ![Screenshot from 2023-11-04 17-29-50](https://github.com/NishitaNJ/pes_R2_4BM/assets/142140741/c613ec31-5441-4055-85c6-a918bee30031)
+
+  ![Screenshot from 2023-11-04 17-30-15](https://github.com/NishitaNJ/pes_R2_4BM/assets/142140741/fad502eb-f395-40d1-91fb-50ff2d60821e)
+
   + **Power Report:**
 
     ![Screenshot from 2023-11-04 16-03-11](https://github.com/NishitaNJ/pes_R2_4BM/assets/142140741/56926ea0-179e-4d7a-bfd2-e4e78325b6e9)
